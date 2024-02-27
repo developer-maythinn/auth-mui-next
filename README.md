@@ -16,3 +16,5 @@ For development
 npm install
 npm run dev
 ```
+
+https://auth-mui-next.vercel.app/
