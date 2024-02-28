@@ -36,7 +36,6 @@ export default function Home() {
 
   // Function to submit the form data using Axios
   const handleSubmit = async (e) => {
-    console.log("d");
     e.preventDefault();
     try {
       const response = await axios.post(
@@ -44,8 +43,8 @@ export default function Home() {
         formData
       );
       if (response.data) {
-        // setMessage(response.data.message);
-        router.push("/login");
+        setMessage(response.data.message);
+        // router.push("/login");
       }
       console.log("Post created:", response.data);
     } catch (error) {
