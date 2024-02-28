@@ -39,7 +39,7 @@ export default function Home() {
 
     try {
       const response = await axios.post(
-        "http://54.179.146.88:3000/api/login",
+        "https://api.wailinuat.cloudns.biz/api/login",
         formData
       );
       if (response.data.success) {
