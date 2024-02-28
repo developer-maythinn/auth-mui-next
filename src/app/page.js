@@ -15,7 +15,7 @@ import {
   TextField,
 } from "@mui/material";
 import axios from "axios";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   // State to store the form data
@@ -28,7 +28,7 @@ export default function Home() {
     phone: undefined,
   });
   const [message, setMessage] = React.useState("");
-  // const router = useRouter();
+  const router = useRouter();
   // Function to handle form input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -44,7 +44,7 @@ export default function Home() {
       );
       if (response.data) {
         setMessage(response.data.message);
-        // router.push("/login");
+        router.push("/login");
       }
       console.log("Post created:", response.data);
     } catch (error) {

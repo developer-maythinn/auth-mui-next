@@ -14,7 +14,7 @@ import {
   TextField,
 } from "@mui/material";
 import axios from "axios";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   // State to store the form data
@@ -26,7 +26,7 @@ export default function Home() {
     address: "",
     phone: undefined,
   });
-  // const router = useRouter();
+  const router = useRouter();
   const [message, setMessage] = React.useState("");
   // Function to handle form input changes
   const handleChange = (e) => {
@@ -44,7 +44,7 @@ export default function Home() {
       );
       if (response.data.success) {
         setMessage("Successfully");
-        // router.push("/welcome");
+        router.push("/welcome");
       }
 
       console.log("Post created:", response.data);
