@@ -14,6 +14,7 @@ import {
   TextField,
 } from "@mui/material";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   // State to store the form data
@@ -25,6 +26,7 @@ export default function Home() {
     address: "",
     phone: undefined,
   });
+  const router = useRouter();
   const [message, setMessage] = React.useState("");
   // Function to handle form input changes
   const handleChange = (e) => {
@@ -34,13 +36,15 @@ export default function Home() {
   // Function to submit the form data using Axios
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const response = await axios.post(
         "http://54.179.146.88:3000/api/login",
         formData
       );
       if (response.data.success) {
-        setMessage("Successfully");
+        // setMessage("Successfully");
+        router.push("/welcome");
       }
 
       console.log("Post created:", response.data);
@@ -106,10 +110,17 @@ export default function Home() {
                 fullWidth
                 variant="contained"
                 color="primary"
-                sx={{ mt: 3, mb: 2 }}
+                sx={{ mt: 3, mb: 1 }}
               >
                 Sign In
               </Button>
+              <Grid container justify="flex-end">
+                <Grid item>
+                  <Link href="/" variant="body2">
+                    Don't have any account? Sign up
+                  </Link>
+                </Grid>
+              </Grid>
             </form>
           </CardContent>
         </Card>
