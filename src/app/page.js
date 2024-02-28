@@ -44,7 +44,7 @@ export default function Home() {
       );
       if (response.data) {
         setMessage(response.data.message);
-        // router.push("/login");
+        router.push("/login");
       }
       console.log("Post created:", response.data);
     } catch (error) {

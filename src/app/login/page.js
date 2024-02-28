@@ -44,7 +44,7 @@ export default function Home() {
       );
       if (response.data.success) {
         setMessage("Successfully");
-        // router.push("/welcome");
+        router.push("/welcome");
       }
 
       console.log("Post created:", response.data);
