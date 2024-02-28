@@ -1,4 +1,5 @@
-import { Box, Typography } from "@mui/material";
+import { CenterFocusStrongOutlined } from "@mui/icons-material";
+import { Box, Card, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
@@ -11,18 +12,23 @@ function Welcome() {
           background: "#fff",
           display: "flex",
           justifyContent: "center",
+          background:
+            //    "url(/images/online-shop-bg.png) no-repeat",
+            "linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(/images/online-shop-bg.png) no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          alignItems: "center",
         }}
       >
         <Box sx={{ textAlign: "center" }}>
-          <Image
-            src="/images/online-shop.jpeg"
-            width={200}
-            height={200}
-            style={{ objectFit: "contain" }}
-          ></Image>
-          <Typography variant="h3" sx={{ textTransform: "capitalize" }}>
-            Welcome to our shop
-          </Typography>
+          <Card sx={{ p: 3, background: "transparent" }}>
+            <Typography
+              variant="h3"
+              sx={{ textTransform: "capitalize", color: "orange" }}
+            >
+              Welcome to our shop
+            </Typography>
+          </Card>
         </Box>
       </Box>
     </>
