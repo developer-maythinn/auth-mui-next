@@ -1,3 +1,4 @@
+import ResponsiveAppBar from "@/components/ResponsiveAppBar";
 import { CenterFocusStrongOutlined } from "@mui/icons-material";
 import { Box, Card, Typography } from "@mui/material";
 import Image from "next/image";
@@ -7,6 +8,20 @@ function Welcome() {
   return (
     <>
       <Box
+        sx={{
+          height: "100vh",
+          background: "#fff",
+
+          background:
+            // linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+            " url(/images/university.avif) no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <ResponsiveAppBar />
+      </Box>
+      {/* <Box
         sx={{
           height: "100vh",
           background: "#fff",
@@ -20,6 +35,7 @@ function Welcome() {
           alignItems: "center",
         }}
       >
+
         <Box sx={{ textAlign: "center" }}>
           <Card sx={{ p: 3, background: "transparent" }}>
             <Typography
@@ -30,7 +46,7 @@ function Welcome() {
             </Typography>
           </Card>
         </Box>
-      </Box>
+      </Box> */}
     </>
   );
 }

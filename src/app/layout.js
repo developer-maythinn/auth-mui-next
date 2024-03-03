@@ -10,9 +10,8 @@ export default function RootLayout(props) {
     <html lang="en">
       <body
         style={{
-          background:
-            "linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(/images/bg-img.jpeg) repeat",
-          backgroundSize: "cover",
+          background: " url(/images/bg-img2.avif) no-repeat",
+          backgroundSize: "100% 100%",
         }}
       >
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
