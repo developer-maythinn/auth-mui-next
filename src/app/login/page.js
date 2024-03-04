@@ -61,10 +61,11 @@ export default function Home() {
         maxWidth="lg"
         sx={{
           display: "flex",
-          height: { xs: "100vh", md: "fit-content", lg: "100vh" },
+          height: { lg: "100vh" },
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
+          p: 3,
         }}
       >
         <Box sx={{ textAlign: "center", mb: 3 }}>
@@ -78,8 +79,7 @@ export default function Home() {
             <Card
               sx={{
                 position: "relative",
-                height: { md: "60vh" },
-                // py: 4,
+                height: { lg: "60vh" },
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -96,7 +96,9 @@ export default function Home() {
                   xs={12}
                   sx={{
                     position: "relative",
-                    display: { xs: "none", md: "block" },
+                    display: { xs: "none", sm: "flex" },
+                    height: { xs: "40vh", lg: "100%" },
+                    width: "100%",
                   }}
                 >
                   <Image
@@ -105,7 +107,7 @@ export default function Home() {
                     style={{
                       objectFit: "cover",
                       padding: "24px",
-                      paddingRight: 0,
+                      // paddingRight: 0,
                     }}
                   />
                 </Grid>
@@ -125,6 +127,7 @@ export default function Home() {
                       alignItems: "center",
                       flexDirection: "column",
                       p: 3,
+                      pl: { md: 0 },
                     }}
                   >
                     <Image src="/images/logo.png" width={80} height={80} />

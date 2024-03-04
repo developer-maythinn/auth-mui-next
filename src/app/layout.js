@@ -10,13 +10,15 @@ export default function RootLayout(props) {
     <html lang="en">
       <body
         style={{
-          background: " url(/images/bg-img2.avif) no-repeat",
+          background:
+            // linear-gradient(to right bottom, rgba(0,0,0, 0.4), rgba(255, 255, 255, 0.2)),
+            "url(/images/bg-img2.avif) no-repeat",
           backgroundSize: "100% 100%",
+          backgroundAttachment: "fixed",
         }}
       >
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider theme={theme}>
-            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline />
             {props.children}
           </ThemeProvider>

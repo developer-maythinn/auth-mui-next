@@ -1,35 +1,57 @@
-import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import NextLink from 'next/link';
-import ProTip from '@/components/ProTip';
-import Copyright from '@/components/Copyright';
+"use client";
+import { Box, Container, TextField } from "@mui/material";
+import Image from "next/image";
 
-export default function About() {
+const ResponsiveLayout = () => {
   return (
-    <Container maxWidth="lg">
+    <Container
+      maxWidth="lg"
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
       <Box
         sx={{
-          my: 4,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
+          flex: 1,
+          order: { xs: 2, md: 1 },
+          textAlign: "center",
+          mb: { xs: 2, md: 0 },
+          height: { xs: "50vh", md: "auto" }, // Adjust the height as needed
+          position: "relative",
+          
         }}
       >
-        <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
-          Material UI - Next.js example in TypeScript
-        </Typography>
-        <Box sx={{ maxWidth: 'sm' }}>
-          <Button variant="contained" component={NextLink} href="/">
-            Go to the home page
-          </Button>
-        </Box>
-        <ProTip />
-        <Copyright />
+        <Image
+          src="/images/university.avif"
+          fill
+          style={{
+            objectFit: "cover",
+            padding: "24px",
+            // paddingRight: 0,
+          }}
+        />{" "}
+      </Box>
+      <Box
+        sx={{
+          flex: 1,
+          order: { xs: 1, md: 2 },
+          textAlign: "center",
+          ml: { xs: 0, md: 2 },
+        }}
+      >
+        <TextField
+          label="First Name"
+          variant="outlined"
+          fullWidth
+          sx={{ mb: 2 }}
+        />
+        <TextField label="Last Name" variant="outlined" fullWidth />
       </Box>
     </Container>
   );
-}
+};
+
+export default ResponsiveLayout;
