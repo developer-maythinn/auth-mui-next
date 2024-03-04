@@ -67,12 +67,12 @@ export default function Home() {
           p: 3,
         }}
       >
-        <Box sx={{ textAlign: "center", mb: 3 }}>
+        {/* <Box sx={{ textAlign: "center", mb: 3 }}>
           <Image src="/images/logo.png" width={120} height={120} />
           <Typography component="h1" variant="h5" sx={{ mb: 5 }}>
             Congratulations on well-deserved scholarship win!{" "}
           </Typography>
-        </Box>
+        </Box> */}
         <Grid container>
           <Grid item xs={12}>
             <Card

@@ -70,8 +70,8 @@ export default function Home() {
       >
         <Box sx={{ textAlign: "center", mb: 3 }}>
           <Image src="/images/logo.png" width={120} height={120} />
-          <Typography component="h1" variant="h5" sx={{ mb: 5 }}>
-            Congratulations on well-deserved scholarship win!{" "}
+          <Typography component="h1" variant="h5">
+            Congratulations on well-deserved scholarship win! 🎉🎈🙌
           </Typography>
         </Box>
         <Grid container>
