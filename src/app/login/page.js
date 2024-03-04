@@ -79,7 +79,7 @@ export default function Home() {
             <Card
               sx={{
                 position: "relative",
-                height: { lg: "60vh" },
+                height: { lg: "70vh" },
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
